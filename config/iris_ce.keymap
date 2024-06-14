@@ -12,14 +12,14 @@
     combos {
         compatible = "zmk,combos";
 
-        cret {
-            bindings = <&kp ENTER>;
-            key-positions = <55 54>;
+        cb_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <15 16>;
         };
 
-        cesc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <50 51>;
+        cb_ret {
+            bindings = <&kp RET>;
+            key-positions = <20 19>;
         };
     };
 
@@ -97,21 +97,21 @@
 
         default_layer {
             bindings = <
-&mt LS(LA(LC(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4              &kp N5                                               &kp N6             &kp N7                        &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB                     &kp Q   &kp W   &kp E   &kp R               &kp T                                                &kp Y              &kp U                         &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F               &kp G                                                &kp H              &kp J                         &kp K      &kp L    &kp SEMI  &kp SQT
-&mo 9                       &kp Z   &kp X   &kp C   &kp V               &kp B      &kp ESC              &kp ENTER            &kp N              &kp M                         &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &tht LCTRL LG(TAB)  &kp LSHFT  &tht LGUI BACKSPACE  &tht LEFT_ALT SPACE  &volley_r RSHFT 6  &tht_caps LS(LA(LC(LGUI))) 0
+&mt LS(LA(LC(LGUI))) GRAVE  &kp N1          &kp N2         &kp N3         &kp N4                     &kp N5                              &kp N6             &kp N7                        &kp N8         &kp N9         &kp N0             &kp MINUS
+&kp TAB                     &kp Q           &kp W          &kp E          &kp R                      &kp T                               &kp Y              &kp U                         &kp I          &kp O          &kp P              &kp EQUAL
+&mt LCTRL ESCAPE            &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LGUI D  &kp F                      &hrm_l RALT G                       &hrm_r RALT H      &kp J                         &hrm_r LGUI K  &hrm_r LALT L  &hrm_r LCTRL SEMI  &kp SQT
+&mo 10                      &kp Z           &kp X          &kp C          &hrm_l LS(LA(LC(LGUI))) V  &kp B          &kp ESC   &kp ENTER  &kp N              &hrm_r LS(LA(LC(LGUI))) M     &kp COMMA      &kp DOT        &kp FSLH           &kp MINUS
+                                                                          &kp TAB                    &kp LSHFT      &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps LS(LA(LC(LGUI))) 0
             >;
         };
 
-        hrm_layer {
+        hrm_off_layer {
             bindings = <
-&trans  &trans          &trans         &trans         &trans                     &trans                         &trans         &trans                     &trans         &trans             &trans             &trans
-&trans  &trans          &trans         &trans         &trans                     &trans                         &trans         &trans                     &trans         &trans             &trans             &trans
-&trans  &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LGUI D  &trans                     &hrm_l RALT G                  &hrm_r RALT H  &trans                     &hrm_r LGUI K  &hrm_r LG(LALT) L  &hrm_r LCTRL SEMI  &trans
-&trans  &trans          &trans         &trans         &hrm_l LS(LA(LC(LGUI))) V  &trans         &trans  &trans  &trans         &hrm_r LS(LA(LC(LGUI))) M  &trans         &trans             &trans             &trans
-                                                      &trans                     &trans         &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &kp A   &kp S   &kp D   &trans  &kp G                   &kp H   &trans  &kp K   &kp L   &kp SEMI  &trans
+&trans  &trans  &trans  &trans  &kp V   &trans  &trans  &trans  &trans  &kp M   &trans  &trans  &trans    &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -135,13 +135,23 @@
             >;
         };
 
-        hmr_hard_layer {
+        cdh_hrm_off_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans   &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans  &trans         &trans     &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp TAB  &trans  &kp BACKSPACE  &kp SPACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A   &kp R   &kp S   &trans  &kp G                   &kp M   &trans  &kp E   &kp I   &kp O   &trans
+&trans  &trans  &trans  &trans  &kp C   &trans  &trans  &trans  &trans  &kp H   &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        hrm_easy_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans          &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                                &tht LCTRL TAB  &trans  &tht LGUI BSPC  &tht RALT SPACE  &trans  &trans
             >;
         };
 
@@ -161,7 +171,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC   &kp BACKSLASH  &trans
-                                &mo 10  &trans  &trans  &trans  &trans    &trans
+                                &mo 11  &trans  &trans  &trans  &trans    &trans
             >;
         };
 
@@ -187,7 +197,7 @@
 
         media_layer {
             bindings = <
-&bootloader  &tog 2      &tog 1        &tog 4        &tog 11  &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &tog 2      &tog 1        &tog 5        &tog 12  &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans      &trans        &trans        &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -230,23 +240,28 @@
         compatible = "zmk,conditional-layers";
 
         lh_mods_extend {
-            if-layers = <6>;
-            then-layer = <6>;
+            if-layers = <7>;
+            then-layer = <7>;
         };
 
         lh_mods_num {
-            if-layers = <7>;
-            then-layer = <6>;
+            if-layers = <8>;
+            then-layer = <7>;
         };
 
         lh_mods_fn {
-            if-layers = <10>;
-            then-layer = <6>;
+            if-layers = <11>;
+            then-layer = <7>;
         };
 
         cdh_hrm {
-            if-layers = <1 2>;
+            if-layers = <2>;
             then-layer = <3>;
+        };
+
+        cdh_hmr_off {
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 };
