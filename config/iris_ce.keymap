@@ -26,15 +26,15 @@
     };
 
     behaviors {
-        tht: tht {
+        tht_rh: tht_rh {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT";
+            label = "THT_RH";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <100>;
             quick-tap-ms = <200>;
             hold-while-undecided;
         };
@@ -104,6 +104,18 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 42 43 50 51 52 53 54 55>;
             hold-while-undecided;
         };
+
+        tht_rt: tht_rt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THT_RT";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <350>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -161,11 +173,11 @@
 
         hrm_easy_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans                                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans          &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                                &tht LCTRL TAB  &trans  &tht LGUI BSPC  &tht RALT SPACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans             &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                                &tht_rh LCTRL TAB  &trans  &tht_rh LGUI BSPC  &tht_rt RALT SPACE  &trans  &trans
             >;
         };
 
