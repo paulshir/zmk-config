@@ -111,11 +111,11 @@
 
         default_layer {
             bindings = <
-&mt LS(LA(LC(LGUI))) GRAVE  &kp N1          &kp N2         &kp N3         &kp N4                     &kp N5                                  &kp N6             &kp N7                        &kp N8         &kp N9         &kp N0             &kp MINUS
-&kp TAB                     &kp Q           &kp W          &kp E          &kp R                      &kp T                                   &kp Y              &kp U                         &kp I          &kp O          &kp P              &kp EQUAL
-&mt LCTRL ESCAPE            &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LGUI D  &kp F                      &hrm_l RALT G                           &hrm_r RALT H      &kp J                         &hrm_r LGUI K  &hrm_r LALT L  &hrm_r LCTRL SEMI  &kp SQT
-&mo 10                      &kp Z           &kp X          &kp C          &hrm_l LS(LA(LC(LGUI))) V  &kp B              &kp ESC   &kp ENTER  &kp N              &hrm_r LS(LA(LC(LGUI))) M     &kp COMMA      &kp DOT        &kp FSLH           &kp MINUS
-                                                                          &kp TAB                    &volley_l LSHFT 6  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps LS(LA(LC(LGUI))) 0
+&mt LS(LA(LC(LGUI))) GRAVE  &kp N1          &kp N2         &kp N3         &kp N4                     &kp N5                                   &kp N6             &kp N7                        &kp N8         &kp N9         &kp N0             &kp MINUS
+&kp TAB                     &kp Q           &kp W          &kp E          &kp R                      &kp T                                    &kp Y              &kp U                         &kp I          &kp O          &kp P              &kp EQUAL
+&mt LCTRL ESCAPE            &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LGUI D  &kp F                      &hrm_l RALT G                            &hrm_r RALT H      &kp J                         &hrm_r LGUI K  &hrm_r LALT L  &hrm_r LCTRL SEMI  &kp SQT
+&mo 10                      &kp Z           &kp X          &kp C          &hrm_l LS(LA(LC(LGUI))) V  &kp B               &kp ESC   &kp ENTER  &kp N              &hrm_r LS(LA(LC(LGUI))) M     &kp COMMA      &kp DOT        &kp FSLH           &kp MINUS
+                                                                          &kp TAB                    &volley_l LSHFT 11  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps LS(LA(LC(LGUI))) 0
             >;
         };
 
