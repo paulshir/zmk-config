@@ -23,6 +23,21 @@
             bindings = <&kp RET>;
             key-positions = <20 19>;
         };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <37 38>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <40 39>;
+        };
     };
 
     behaviors {
