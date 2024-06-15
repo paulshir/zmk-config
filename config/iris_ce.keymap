@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
         };
-        
+
         tht_rh: tht_rh {
             compatible = "zmk,behavior-hold-tap";
             label = "THT_RH";
@@ -128,21 +128,21 @@
 
         default_layer {
             bindings = <
-&mt LS(LA(LC(LGUI))) GRAVE  &kp N1          &kp N2         &kp N3         &kp N4                     &kp N5                                   &kp N6             &kp N7                        &kp N8         &kp N9         &kp N0             &kp MINUS
-&kp TAB                     &kp Q           &kp W          &kp E          &kp R                      &kp T                                    &kp Y              &kp U                         &kp I          &kp O          &kp P              &kp EQUAL
-&mt LCTRL ESCAPE            &hrm_l LCTRL A  &hrm_l LALT S  &hrm_l LGUI D  &kp F                      &hrm_l RALT G                            &hrm_r RALT H      &kp J                         &hrm_r LGUI K  &hrm_r LALT L  &hrm_r LCTRL SEMI  &kp SQT
-&mo 10                      &kp Z           &kp X          &kp C          &hrm_l LS(LA(LC(LGUI))) V  &kp B               &kp ESC   &kp ENTER  &kp N              &hrm_r LS(LA(LC(LGUI))) M     &kp COMMA      &kp DOT        &kp FSLH           &kp MINUS
-                                                                          &kp TAB                    &volley_l LSHFT 11  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps LS(LA(LC(LGUI))) 0
+&mt LS(LA(LC(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                   &kp N6             &kp N7                        &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB                     &kp Q   &kp W   &kp E   &kp R    &kp T                                    &kp Y              &kp U                         &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F    &kp G                                    &kp H              &kp J                         &kp K      &kp L    &kp SEMI  &kp SQT
+&mo 9                       &kp Z   &kp X   &kp C   &kp V    &kp B               &kp ESC   &kp ENTER  &kp N              &kp N                         &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &kp TAB  &volley_l LSHFT 10  &kp BSPC  &kp SPACE  &volley_r RSHFT 6  &tht_caps LS(LA(LC(LGUI))) 0
             >;
         };
 
-        hrm_off_layer {
+        hrm_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &kp A   &kp S   &kp D   &trans  &kp G                   &kp H   &trans  &kp K   &kp L   &kp SEMI  &trans
-&trans  &trans  &trans  &trans  &kp V   &trans  &trans  &trans  &trans  &kp M   &trans  &trans  &trans    &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans         &trans          &trans                     &trans                         &trans         &trans                     &trans          &trans         &trans             &trans
+&trans  &trans          &trans         &trans          &trans                     &trans                         &trans         &trans                     &trans          &trans         &trans             &trans
+&trans  &hrm_l LSHFT A  &hrm_l LALT S  &hrm_l LCTRL D  &hrm_l LGUI F              &hrm_l RALT G                  &hrm_r RALT H  &hrm_r RGUI J              &hrm_r RCTRL K  &hrm_r LALT L  &hrm_r RSHFT SEMI  &trans
+&trans  &trans          &trans         &trans          &hrm_l LS(LA(LC(LGUI))) V  &trans         &trans  &trans  &trans         &hrm_r LS(LA(LC(LGUI))) M  &trans          &trans         &trans             &trans
+                                                       &trans                     &trans         &trans  &trans  &trans         &trans
             >;
         };
 
@@ -156,23 +156,13 @@
             >;
         };
 
-        cdh_hrm_layer {
+        cmd_hrm_layer {
             bindings = <
-&trans  &trans          &trans         &trans         &trans                     &trans                         &trans         &trans                     &trans         &trans             &trans              &trans
-&trans  &trans          &trans         &trans         &trans                     &trans                         &trans         &trans                     &trans         &trans             &trans              &trans
-&trans  &hrm_l LCTRL A  &hrm_l LALT R  &hrm_l LGUI S  &trans                     &hrm_l RALT G                  &hrm_r RALT M  &trans                     &hrm_r LGUI E  &hrm_r LG(LALT) I  &hrm_r LCTRL LG(O)  &trans
-&trans  &trans          &trans         &trans         &hrm_l LS(LA(LC(LGUI))) D  &trans         &trans  &trans  &trans         &hrm_r LS(LA(LC(LGUI))) H  &trans         &trans             &trans              &trans
-                                                      &trans                     &trans         &trans  &trans  &trans         &trans
-            >;
-        };
-
-        cdh_hrm_off_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A   &kp R   &kp S   &trans  &kp G                   &kp M   &trans  &kp E   &kp I   &kp O   &trans
-&trans  &trans  &trans  &trans  &kp C   &trans  &trans  &trans  &trans  &kp H   &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans         &trans          &trans                     &trans                         &trans         &trans                     &trans          &trans         &trans          &trans
+&trans  &trans          &trans         &trans          &trans                     &trans                         &trans         &trans                     &trans          &trans         &trans          &trans
+&trans  &hrm_l LSHFT A  &hrm_l LALT R  &hrm_l LCTRL S  &hrm_l LGUI T              &hrm_l RALT G                  &hrm_r RALT M  &hrm_r RGUI N              &hrm_r RCTRL E  &hrm_r LALT I  &hrm_r RSHFT O  &trans
+&trans  &trans          &trans         &trans          &hrm_l LS(LA(LC(LGUI))) D  &trans         &trans  &trans  &trans         &hrm_r LS(LA(LC(LGUI))) H  &trans          &trans         &trans          &trans
+                                                       &trans                     &trans         &trans  &trans  &trans         &trans
             >;
         };
 
@@ -190,7 +180,7 @@
             bindings = <
 &trans  &trans     &trans    &trans            &trans                 &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans            &trans                 &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LCTRL  &sk LALT  &sk LGUI          &sk LSHFT              &sk RALT                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &sk LSHFT  &sk LALT  &sk LCTRL         &sk LGUI               &sk RALT                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &sk LC(LA(LGUI))  &sk LA(LC(LG(LSHFT)))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                &trans                 &trans    &trans  &trans  &trans  &trans
             >;
@@ -202,7 +192,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC   &kp BACKSLASH  &trans
-                                &mo 11  &trans  &trans  &trans  &trans    &trans
+                                &mo 10  &trans  &trans  &trans  &trans    &trans
             >;
         };
 
@@ -228,7 +218,7 @@
 
         media_layer {
             bindings = <
-&bootloader  &tog 2      &tog 1        &tog 5        &tog 12  &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &tog 2      &tog 1        &tog 4        &tog 11  &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans      &trans        &trans        &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -271,28 +261,23 @@
         compatible = "zmk,conditional-layers";
 
         lh_mods_extend {
-            if-layers = <7>;
-            then-layer = <6>;
+            if-layers = <6>;
+            then-layer = <5>;
         };
 
         lh_mods_num {
-            if-layers = <8>;
-            then-layer = <6>;
+            if-layers = <7>;
+            then-layer = <5>;
         };
 
         lh_mods_fn {
-            if-layers = <11>;
-            then-layer = <6>;
+            if-layers = <10>;
+            then-layer = <5>;
         };
 
         cdh_hrm {
-            if-layers = <2>;
+            if-layers = <2 1>;
             then-layer = <3>;
-        };
-
-        cdh_hmr_off {
-            if-layers = <1 2>;
-            then-layer = <4>;
         };
     };
 };
