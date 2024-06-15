@@ -18,5 +18,8 @@ manifest:
     - name: zmk-board-iris-ce
       remote: paulshir
       revision: main
+    - name: zmk-behaviors-dev
+      remote: paulshir
+      revision: main
   self:
     path: config

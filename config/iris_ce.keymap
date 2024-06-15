@@ -26,6 +26,11 @@
     };
 
     behaviors {
+        startup_layers: startup-layers {
+            compatible = "zmk,behavior-startup-layers";
+            #binding-cells = <0>;
+        };
+        
         tht_rh: tht_rh {
             compatible = "zmk,behavior-hold-tap";
             label = "THT_RH";
