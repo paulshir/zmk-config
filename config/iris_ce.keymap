@@ -41,9 +41,10 @@
     };
 
     behaviors {
-        startup_layers: startup-layers {
+        startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
+            startup-layers-list = <1 4>;
         };
 
         tht_rh: tht_rh {
