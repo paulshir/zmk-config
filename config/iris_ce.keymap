@@ -44,7 +44,7 @@
         startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
-            startup-layers-list = <1 4>;
+            startup-layers-list = <1 2>;
         };
 
         tht_rh: tht_rh {
@@ -137,6 +137,19 @@
             require-prior-idle-ms = <350>;
             quick-tap-ms = <200>;
         };
+
+        tht_l: tht_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THT_L";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <350>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
+
+            hold-while-undecided;
+        };
     };
 
     keymap {
@@ -162,6 +175,16 @@
             >;
         };
 
+        hrm_easy_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans         &trans  &trans             &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                                &tht_l 11 TAB  &trans  &tht_rh LGUI BSPC  &tht_rt RALT SPACE  &trans  &trans
+            >;
+        };
+
         cdh_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans     &trans   &trans    &trans
@@ -179,16 +202,6 @@
 &trans  &hrm_l LSHFT A  &hrm_l LCTRL R  &hrm_l LALT S  &hrm_l LGUI T              &hrm_l RALT G                  &hrm_r RALT M  &hrm_r RGUI N              &hrm_r LALT E  &hrm_r RCTRL I  &hrm_r RSHFT O  &trans
 &trans  &trans          &trans          &trans         &hrm_l LS(LC(LA(LGUI))) D  &trans         &trans  &trans  &trans         &hrm_r LS(LC(LA(LGUI))) H  &trans         &trans          &trans          &trans
                                                        &trans                     &trans         &trans  &trans  &trans         &trans
-            >;
-        };
-
-        hrm_easy_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans  &trans             &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                                &tht_rh LCTRL TAB  &trans  &tht_rh LGUI BSPC  &tht_rt RALT SPACE  &trans  &trans
             >;
         };
 
@@ -212,9 +225,9 @@
             >;
         };
 
-        extend_layer {
+        nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans     &trans     &trans     &trans         &bootloader
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans     &trans     &trans     &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC   &kp BACKSLASH  &trans
@@ -244,11 +257,11 @@
 
         media_layer {
             bindings = <
-&bootloader  &tog 2      &tog 1        &tog 4        &tog 12  &rgb_ug RGB_TOG                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans      &trans        &trans        &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                     &trans   &trans           &trans  &trans  &trans  &trans
+&bootloader  &tog 3      &tog 1        &tog 2        &tog 14  &sys_reset                  &sys_reset       &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans                             &trans                             &bootloader
+&trans       &trans      &trans        &trans        &trans   &trans                      &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans                             &trans                             &trans
+&trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                      &rgb_ug RGB_EFF  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_COLOR_HSB(298,100,41)  &rgb_ug RGB_COLOR_HSB(119,100,50)  &trans
+&trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans      &trans  &trans  &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_COLOR_HSB(242,0,0)     &trans
+                                                     &trans   &trans      &trans  &trans  &trans           &trans
             >;
         };
 
@@ -258,6 +271,26 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F7   &kp F8   &kp F9   &kp F10  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F4   &kp F5   &kp F6   &kp F11  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3   &kp F12  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        hyper_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -302,8 +335,8 @@
         };
 
         cdh_hrm {
-            if-layers = <2 1>;
-            then-layer = <3>;
+            if-layers = <3 1>;
+            then-layer = <4>;
         };
     };
 };
