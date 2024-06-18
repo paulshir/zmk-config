@@ -13,7 +13,8 @@ manifest:
     #   import: app/west.yml
     - name: zmk
       remote: paulshir
-      revision: split-serial-pr+pio-led
+    #  revision: split-serial-pr+pio-led
+      revision: paulshir
       import: app/west.yml
     - name: zmk-board-iris-ce
       remote: paulshir
