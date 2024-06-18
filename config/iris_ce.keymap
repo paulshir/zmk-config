@@ -4,11 +4,31 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &sk { release-after-ms = <1500>; };
+
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
+};
+
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <200>;
+    delay-ms = <0>;
+};
+
+&num_word {
+    layers = <8>;
+};
 
 / {
     combos {
@@ -98,6 +118,19 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&caps_word>;
+
+            require-prior-idle-ms = <300>;
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
+
+        tht_num: tht_num {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THT_NUM";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&num_word>;
 
             require-prior-idle-ms = <300>;
             quick-tap-ms = <200>;
@@ -209,7 +242,7 @@
 &kp TAB                     &kp Q   &kp W   &kp E   &kp R    &kp T                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
 &mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F    &kp G                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
 &tht_l 10 GRAVE             &kp Z   &kp X   &kp C   &kp V    &kp B              &kp ESC   &kp ENTER  &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &kp TAB  &volley_l LSHFT 8  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
+                                                    &tht_l 12 TAB  &volley_l LSHFT 8  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
             >;
         };
 
@@ -325,11 +358,11 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans  &trans
+                                &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MCLK
             >;
         };
 
