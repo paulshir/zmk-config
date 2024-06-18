@@ -86,7 +86,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THT_RT";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
 
@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "THTL_RT";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
             require-prior-idle-ms = <350>;
             quick-tap-ms = <200>;
@@ -336,7 +336,7 @@
 
         media_layer {
             bindings = <
-&bootloader  &tog 3      &tog 1        &tog 2        &tog 14  &sys_reset                  &sys_reset       &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans                             &trans                             &bootloader
+&bootloader  &tog 3      &tog 1        &tog 14       &tog 15  &sys_reset                  &sys_reset       &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans                             &trans                             &bootloader
 &trans       &trans      &trans        &trans        &trans   &trans                      &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans                             &trans                             &trans
 &trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                      &rgb_ug RGB_EFF  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_COLOR_HSB(298,100,41)  &rgb_ug RGB_COLOR_HSB(119,100,50)  &trans
 &trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans      &trans  &trans  &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_COLOR_HSB(242,0,0)     &trans
