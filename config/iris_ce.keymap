@@ -9,8 +9,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/rgb.h>
 
 &sk { release-after-ms = <1500>; };
 
@@ -26,9 +26,7 @@
     delay-ms = <0>;
 };
 
-&num_word {
-    layers = <8>;
-};
+&num_word { layers = <8>; };
 
 / {
     combos {
@@ -64,7 +62,7 @@
         startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
-            startup-layers-list = <1>;
+            startup-layers-list = <1 2>;
         };
 
         /* thumb hold tap - rolling hold */
@@ -98,9 +96,9 @@
 
         /* thumb hold tap - layer */
 
-        tht_l: tht_l {
+        thtl_rt: thtl_rt {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_L";
+            label = "THTL_RT";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -238,11 +236,11 @@
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB                     &kp Q   &kp W   &kp E   &kp R    &kp T                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F    &kp G                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&tht_l 10 GRAVE             &kp Z   &kp X   &kp C   &kp V    &kp B              &kp ESC   &kp ENTER  &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &tht_l 12 TAB  &volley_l LSHFT 8  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
+&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4           &kp N5                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB                     &kp Q   &kp W   &kp E   &kp R            &kp T                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F            &kp G                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&thtl_rt 10 GRAVE           &kp Z   &kp X   &kp C   &kp V            &kp B              &kp ESC   &kp ENTER  &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &thtl_rt 12 TAB  &volley_l LSHFT 8  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
             >;
         };
 
@@ -256,13 +254,13 @@
             >;
         };
 
-        hrm_easy_layer {
+        relearn_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans                                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans  &trans             &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                                &tht_l 11 TAB  &trans  &tht_rh LGUI BSPC  &tht_rt RALT SPACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans  &trans            &trans             &trans  &trans  &trans  &trans  &trans  &trans
+                                &thtl_rt 11 TAB  &trans  &thtl_rt 16 BSPC  &thtl_rt 16 SPACE  &trans  &trans
             >;
         };
 
@@ -358,11 +356,11 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans  &trans
-                                &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MCLK
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans  &trans
+                                &trans  &trans  &trans  &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
 
@@ -393,6 +391,16 @@
 &none  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &none
 &none  &trans  &trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &trans  &trans  &none
                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        block_layer {
+            bindings = <
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                            &none  &none  &none  &none  &none  &none
             >;
         };
     };
