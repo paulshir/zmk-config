@@ -218,7 +218,8 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <1>;
+
+            ignored-key-positions = <19>;
         };
     };
 
@@ -374,7 +375,7 @@
         hyper_layer {
             bindings = <
 &trans  &kp LG(LA(LC(LS(N1))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LA(LC(LS(N3))))  &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N5))))                  &kp LG(LA(LC(LS(N6))))    &kp LG(LA(LC(LS(N7))))    &kp LG(LA(LC(LS(N8))))  &kp LG(LA(LC(LS(N9))))     &kp LG(LA(LC(LS(N0))))  &trans
-&trans  &trans                  &trans                  &trans                  &trans                  &trans                                  &trans                    &trans                    &trans                  &trans                     &trans                  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                                  &trans                    &kp LS(TAB)               &nwin                   &trans                     &trans                  &trans
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                                  &kp LG(LA(LC(LS(LEFT))))  &kp LG(LA(LC(LS(DOWN))))  &kp LG(LA(LC(LS(UP))))  &kp LG(LA(LC(LS(RIGHT))))  &trans                  &trans
 &trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans  &trans  &trans                    &trans                    &trans                  &trans                     &trans                  &trans
                                                                                 &trans                  &trans                  &trans  &trans  &trans                    &trans
