@@ -21,8 +21,8 @@ include:
   - board: iris_ce_rev1_left
   - board: iris_ce_rev1_right
   - board: iris_ce_rev1_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    cmake-args: "-DSNIPPET='zmk-usb-logging'"
     artifact-name: iris_ce_rev1_left_logging
   - board: iris_ce_rev1_right
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    cmake-args: "-DSNIPPET='zmk-usb-logging'"
     artifact-name: iris_ce_rev1_right_logging
