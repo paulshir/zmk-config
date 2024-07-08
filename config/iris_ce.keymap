@@ -62,7 +62,7 @@
         startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
-            startup-layers-list = <1 2>;
+            startup-layers-list = <1>;
         };
 
         /* thumb hold tap - rolling hold */
@@ -235,13 +235,23 @@
         kp_volley_r: kp_volley_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &volley_r RSHIFT 7 &macro_pause_for_release &macro_release &volley_r RSHFT 7>;
+            bindings =
+                <&macro_press>,
+                <&volley_r RSHIFT 7>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&volley_r RSHFT 7>;
         };
 
         mo_volley_r: mo_volley_r {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &volley_r_rep 7 0 &macro_pause_for_release &macro_release &volley_r_rep 7 0>;
+            bindings =
+                <&macro_press>,
+                <&volley_r_rep 7 0>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&volley_r_rep 7 0>;
         };
 
         sym_up_dir: sym_up_dir {
@@ -264,11 +274,11 @@
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4           &kp N5                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
-&kp TAB                     &kp Q   &kp W   &kp E   &kp R            &kp T                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F            &kp G                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&thtl_rt 10 GRAVE           &kp Z   &kp X   &kp C   &kp V            &kp B              &kp ESC   &kp ENTER  &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &thtl_rt 12 TAB  &volley_l LSHFT 8  &kp BSPC  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
+&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4           &kp N5                                              &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
+&kp TAB                     &kp Q   &kp W   &kp E   &kp R            &kp T                                               &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F            &kp G                                               &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&thtl_rt 10 GRAVE           &kp Z   &kp X   &kp C   &kp V            &kp B              &kp ESC               &kp ENTER  &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &thtl_rt 12 TAB  &volley_l LSHFT 8  &thtl_rt 9 BACKSPACE  &kp SPACE  &volley_r RSHFT 7  &tht_caps 11 0
             >;
         };
 
@@ -284,11 +294,11 @@
 
         relearn_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans  &trans            &trans             &trans  &trans  &trans  &trans  &trans  &trans
-                                &thtl_rt 12 TAB  &trans  &thtl_rt 16 BSPC  &thtl_rt 16 SPACE  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &thtl_rt 16 BSPC  &trans  &trans  &trans
             >;
         };
 
@@ -354,10 +364,10 @@
 
         sym_layer {
             bindings = <
-&trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans             &trans    &trans    &trans     &trans
-&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp DOT                      &kp AMPS   &sym_double_colon  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
-&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                   &kp PIPE   &kp COLON          &kp LPAR  &kp RPAR  &kp QMARK  &trans
-&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans  &trans  &kp TILDE  &kp DLLR           &kp LBRC  &kp RBRC  &kp AT     &trans
+&trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans     &trans    &trans    &trans     &trans
+&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp DOT                      &kp GRAVE  &kp AMPS   &kp LBKT  &kp RBKT  &kp PRCNT  &trans
+&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                   &kp COLON  &kp PIPE   &kp LPAR  &kp RPAR  &kp QMARK  &trans
+&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans  &trans  &kp DLLR   &kp TILDE  &kp LBRC  &kp RBRC  &kp AT     &trans
                                         &trans     &trans       &trans  &trans  &trans     &trans
             >;
         };
