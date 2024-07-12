@@ -62,7 +62,7 @@
         startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
-            startup-layers-list = <2,4>;
+            startup-layers-list = <2 4>;
         };
 
         /* thumb hold tap - rolling hold */
