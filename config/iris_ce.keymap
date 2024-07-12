@@ -152,7 +152,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "VOLLEY_R";
             #binding-cells = <2>;
-            bindings = <&kp>, <&mo_volley_r>;
+            bindings = <&kp>, <&mo>;
 
             flavor = "hold-preferred";
             hold-trigger-key-positions = <0 1 2 3 4 5 17 16 15 14 13 12 24 25 26 27 28 29 41 40 39 38 37 36 42 43 55 53 52 51 50 54>;
@@ -244,14 +244,16 @@
         };
 
         mo_volley_r: mo_volley_r {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&volley_r_rep 7 0>,
+                <&macro_param_1to1>,
+                <&volley_r_rep MACRO_PLACEHOLDER 0>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&volley_r_rep 7 0>;
+                <&macro_param_1to1>,
+                <&volley_r_rep MACRO_PLACEHOLDER 0>;
         };
 
         sym_up_dir: sym_up_dir {
