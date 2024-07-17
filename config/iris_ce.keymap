@@ -493,10 +493,5 @@
             if-layers = <12>;
             then-layer = <5>;
         };
-
-        sym_hrm {
-            if-layers = <2 9>;
-            then-layer = <9>;
-        };
     };
 };
