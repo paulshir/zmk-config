@@ -360,7 +360,7 @@
 &trans    &trans    &trans    &trans     &trans     &trans                     &trans    &trans     &trans     &trans     &trans         &trans
 &trans    &trans    &kp END   &kp PG_UP  &kp PG_DN  &kp HOME                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans         &trans
 &trans    &trans    &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT                  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans         &trans
-&kp PIPE  &kp BSLH  &kp RBRC  &kp LBRC   &kp RBKT   &kp LBKT   &trans  &trans  &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC   &kp BACKSLASH  &kp PIPE
+&kp PIPE  &kp BSLH  &trans    &trans     &trans     &trans     &trans  &trans  &none     &none      &none      &none      &kp BACKSLASH  &kp PIPE
                                          &trans     &trans     &trans  &trans  &trans    &trans
             >;
         };
@@ -377,10 +377,10 @@
 
         sym_layer {
             bindings = <
-&trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans    &trans    &trans    &trans     &trans
-&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp DOT                      &kp GRAVE  &kp AMPS  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
-&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                   &kp COLON  &kp PIPE  &kp LPAR  &kp RPAR  &kp QMARK  &trans
-&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans  &trans  &kp TILDE  &kp DLLR  &kp LBRC  &kp RBRC  &kp AT     &trans
+&trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans     &trans    &trans    &trans     &trans
+&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp DOT                      &kp AMPS   &kp GRAVE  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
+&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                   &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &trans
+&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans  &trans  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp AT     &trans
                                         &mo 13     &trans       &trans  &trans  &trans     &trans
             >;
         };
@@ -388,9 +388,9 @@
         sym_mir_layer {
             bindings = <
 &trans  &trans     &trans    &trans    &trans     &trans                     &trans      &trans     &trans    &trans     &trans     &trans
-&trans  &kp PRCNT  &kp RBKT  &kp LBKT  &kp AMPS   &kp GRAVE                  &kp DOT     &kp DQT    &kp GT    &kp LT     &kp SQT    &trans
-&trans  &kp QMARK  &kp RPAR  &kp LPAR  &kp PIPE   &kp COLON                  &kp LA(N3)  &kp EQUAL  &kp PLUS  &kp MINUS  &kp EXCL   &trans
-&trans  &kp AT     &kp RBRC  &kp LBRC  &kp TILDE  &kp DLLR   &trans  &trans  &kp DOT     &kp BSLH   &kp STAR  &kp FSLH   &kp CARET  &trans
+&trans  &kp PRCNT  &kp RBKT  &kp LBKT  &kp GRAVE  &kp AMPS                   &kp DOT     &kp DQT    &kp GT    &kp LT     &kp SQT    &trans
+&trans  &kp QMARK  &kp RPAR  &kp LPAR  &kp COLON  &kp PIPE                   &kp LA(N3)  &kp EQUAL  &kp PLUS  &kp MINUS  &kp EXCL   &trans
+&trans  &kp AT     &kp RBRC  &kp LBRC  &kp DLLR   &kp TILDE  &trans  &trans  &kp DOT     &kp BSLH   &kp STAR  &kp FSLH   &kp CARET  &trans
                                        &trans     &trans     &trans  &trans  &trans      &trans
             >;
         };
