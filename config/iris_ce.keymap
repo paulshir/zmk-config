@@ -32,15 +32,15 @@
     combos {
         compatible = "zmk,combos";
 
-        cb_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <15 16>;
-        };
+        // cb_esc {
+        //     bindings = <&kp ESCAPE>;
+        //     key-positions = <15 16>;
+        // };
 
-        cb_ret {
-            bindings = <&kp RET>;
-            key-positions = <20 19>;
-        };
+        // cb_ret {
+        //     bindings = <&kp RET>;
+        //     key-positions = <20 19>;
+        // };
 
         cut {
             bindings = <&kp LG(X)>;
