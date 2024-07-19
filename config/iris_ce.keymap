@@ -64,7 +64,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         //     bindings = <&kp ESCAPE>;
         //     key-positions = <15 16>;
         // };
-
         // cb_ret {
         //     bindings = <&kp RET>;
         //     key-positions = <20 19>;
@@ -355,11 +354,11 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         relearn_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans             &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &tht_bspc 9 BSPC  &thtl_rt 12 SPACE  &trans  &trans
+&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans     &trans   &trans    &none
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans     &trans   &kp SEMI  &none
+&mo 13  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp DOT  &none     &none
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
