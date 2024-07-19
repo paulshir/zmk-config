@@ -26,6 +26,34 @@
     delay-ms = <0>;
 };
 
+#define ZMK_BLOCK_SHIFT(name, key) \
+    / { \
+        behaviors { \
+            no_s_##name: no_s_##name { \
+                compatible = "zmk,behavior-mod-morph"; \
+                bindings = <&kp key>, <&none>; \
+                #binding-cells = <0>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+            }; \
+        }; \
+    };
+
+ZMK_BLOCK_SHIFT(n1, N1)
+ZMK_BLOCK_SHIFT(n2, N2)
+ZMK_BLOCK_SHIFT(n3, N3)
+ZMK_BLOCK_SHIFT(n4, N4)
+ZMK_BLOCK_SHIFT(n5, N5)
+ZMK_BLOCK_SHIFT(n6, N6)
+ZMK_BLOCK_SHIFT(n7, N7)
+ZMK_BLOCK_SHIFT(n8, N8)
+ZMK_BLOCK_SHIFT(n9, N9)
+ZMK_BLOCK_SHIFT(n0, N0)
+ZMK_BLOCK_SHIFT(minus, MINUS)
+ZMK_BLOCK_SHIFT(equal, EQUAL)
+ZMK_BLOCK_SHIFT(semi, SEMI)
+ZMK_BLOCK_SHIFT(comma, COMMA)
+ZMK_BLOCK_SHIFT(dot, DOT)
+
 &num_word { layers = <8>; };
 
 / {
