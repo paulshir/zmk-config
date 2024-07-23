@@ -317,8 +317,8 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
 &kp TAB                     &kp Q   &kp W   &kp E   &kp R   &kp T                                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
 &mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F   &kp G                                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC            &kp ENTER         &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &mo 1   &volley_l LSHFT 8  &tht_bspc 10 BSPC  &thtl_rt 9 SPACE  &volley_r RSHFT 7  &tht_caps 15 0
+&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC           &kp ENTER          &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &mo 1   &volley_l LSHFT 8  &thtl_rt 9 SPACE  &tht_bspc 10 BSPC  &volley_r RSHFT 7  &tht_caps 15 0
             >;
         };
 
@@ -327,8 +327,8 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &none      &kp N0    &kp N9   &kp N8     &kp N7  &kp N6                                                  &kp N5     &kp N4  &kp N3  &kp N2  &kp N1  &kp GRAVE
 &kp EQUAL  &kp P     &kp O    &kp I      &kp U   &kp Y                                                   &kp T      &kp R   &kp E   &kp W   &kp Q   &kp TAB
 &kp SQT    &kp SEMI  &kp L    &kp K      &kp J   &kp H                                                   &kp G      &kp F   &kp D   &kp S   &kp A   &kp ESC
-&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET           &kp ESC            &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
-                                         &none   &volley_l RSHFT 7  &thtl_rt 9 SPACE  &tht_bspc 10 BSPC  &kp LSHFT  &none
+&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET            &kp ESC           &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
+                                         &none   &volley_l RSHFT 7  &tht_bspc 10 BSPC  &thtl_rt 9 SPACE  &kp LSHFT  &none
             >;
         };
 
@@ -404,11 +404,11 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         space_layer {
             bindings = <
-&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                   &mo 14   &trans  &kp DEL  &trans  &trans  &trans
+&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                   &mo 14   &trans  &kp DEL  &kp DEL  &trans  &trans
             >;
         };
 
