@@ -314,21 +314,21 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                       &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
-&kp TAB                     &kp Q   &kp W   &kp E   &kp R   &kp T                                                        &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F   &kp G                                                        &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC            &kp ENTER              &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &mo 1   &volley_l LSHFT 8  &thtl_rt 12 SPACE  &tht_bspc 9 BACKSPACE  &volley_r RSHFT 7  &tht_caps 15 0
+&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
+&kp TAB                     &kp Q   &kp W   &kp E   &kp R   &kp T                                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F   &kp G                                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC            &kp ENTER         &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &mo 1   &volley_l LSHFT 8  &tht_bspc 10 BSPC  &thtl_rt 9 SPACE  &volley_r RSHFT 7  &tht_caps 15 0
             >;
         };
 
         mirror_layer {
             bindings = <
-&none      &kp N0    &kp N9   &kp N8     &kp N7  &kp N6                                                       &kp N5     &kp N4  &kp N3  &kp N2  &kp N1  &kp GRAVE
-&kp EQUAL  &kp P     &kp O    &kp I      &kp U   &kp Y                                                        &kp T      &kp R   &kp E   &kp W   &kp Q   &kp TAB
-&kp SQT    &kp SEMI  &kp L    &kp K      &kp J   &kp H                                                        &kp G      &kp F   &kp D   &kp S   &kp A   &kp ESC
-&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET                &kp ESC            &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
-                                         &none   &volley_l RSHFT 7  &tht_bspc 9 BACKSPACE  &thtl_rt 12 SPACE  &kp LSHFT  &none
+&none      &kp N0    &kp N9   &kp N8     &kp N7  &kp N6                                                  &kp N5     &kp N4  &kp N3  &kp N2  &kp N1  &kp GRAVE
+&kp EQUAL  &kp P     &kp O    &kp I      &kp U   &kp Y                                                   &kp T      &kp R   &kp E   &kp W   &kp Q   &kp TAB
+&kp SQT    &kp SEMI  &kp L    &kp K      &kp J   &kp H                                                   &kp G      &kp F   &kp D   &kp S   &kp A   &kp ESC
+&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET           &kp ESC            &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
+                                         &none   &volley_l RSHFT 7  &thtl_rt 9 SPACE  &tht_bspc 10 BSPC  &kp LSHFT  &none
             >;
         };
 
@@ -337,7 +337,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &trans          &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans             &trans
 &trans  &trans          &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans             &trans
 &trans  &hrm_l LSHFT A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &hrm_l RALT G                  &hrm_r RALT H  &hrm_r RGUI J  &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI  &trans
-&trans  &hrl_l 15 Z     &trans          &trans         &hrl_l 9 V     &trans         &trans  &trans  &trans         &hrl_r 9 M     &trans         &trans          &hrl_r 15 SLASH    &trans
+&trans  &hrl_l 15 Z     &trans          &trans         &hrl_l 10 V    &trans         &trans  &trans  &trans         &hrl_r 10 M    &trans         &trans          &hrl_r 15 SLASH    &trans
                                                        &trans         &trans         &trans  &trans  &trans         &trans
             >;
         };
@@ -347,7 +347,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &trans             &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans          &trans
 &trans  &trans             &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans          &trans
 &trans  &hrm_l RSHFT SEMI  &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J  &hrm_l RALT H                  &hrm_r RALT G  &hrm_r LGUI F  &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A  &trans
-&trans  &hrl_l 15 SLASH    &trans          &trans         &hrl_l 9 M     &trans         &trans  &trans  &trans         &hrl_r 9 V     &trans         &trans          &hrl_r 15 Z     &trans
+&trans  &hrl_l 15 SLASH    &trans          &trans         &hrl_l 10 M    &trans         &trans  &trans  &trans         &hrl_r 10 V    &trans         &trans          &hrl_r 15 Z     &trans
                                                           &trans         &trans         &trans  &trans  &trans         &trans
             >;
         };
@@ -355,10 +355,10 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         relearn_layer {
             bindings = <
 &none   &no_s_n1  &no_s_n2  &no_s_n3  &no_s_n4  &no_s_n5                  &no_s_n6  &no_s_n7  &no_s_n8     &no_s_n9   &no_s_n0    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans     &trans   &trans    &none
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans     &trans   &no_s_semi  &none
-&mo 13  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &no_s_comma  &no_s_dot  &none     &none
-                                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans    &trans    &trans       &trans     &trans      &none
+&trans  &trans    &trans    &trans    &trans    &trans                    &trans    &trans    &trans       &trans     &no_s_semi  &trans
+&mo 13  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans    &trans    &no_s_comma  &no_s_dot  &none       &none
+                                      &trans    &trans    &trans  &trans  &trans    &trans
             >;
         };
 
@@ -367,7 +367,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &trans     &trans     &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans    &sl 9     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &sl 10    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans    &trans    &trans  &trans  &trans  &trans
             >;
         };
@@ -377,7 +377,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans    &trans    &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans    &trans    &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &kp RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &sl 9     &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &sl 10    &trans    &trans     &trans     &trans
                                 &trans  &trans  &trans  &trans  &trans    &trans
             >;
         };
@@ -402,6 +402,16 @@ ZMK_BLOCK_SHIFT(dot, DOT)
             >;
         };
 
+        space_layer {
+            bindings = <
+&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                   &mo 14   &trans  &kp DEL  &trans  &trans  &trans
+            >;
+        };
+
         sym_layer {
             bindings = <
 &trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans     &trans    &trans    &trans     &trans
@@ -417,7 +427,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &trans                    &trans              &trans            &trans             &trans                              &trans            &trans             &trans            &trans             &trans                 &trans
 &trans  &trans                    &trans              &trans            &trans             &trans                              &trans            &trans             &trans            &trans             &trans                 &trans
 &trans  &hrm_l LSHFT EXCLAMATION  &hrm_l LCTRL MINUS  &hrm_l LALT PLUS  &hrm_l LGUI EQUAL  &hrm_l RALT LA(N3)                  &hrm_r RALT PIPE  &hrm_r RGUI COLON  &hrm_r LALT LPAR  &hrm_r RCTRL RPAR  &hrm_r RSHFT QUESTION  &trans
-&trans  &trans                    &trans              &trans            &hrl_l 9 BSLH      &trans              &trans  &trans  &trans            &hrl_r 9 DLLR      &trans            &trans             &trans                 &trans
+&trans  &trans                    &trans              &trans            &hrl_l 10 BSLH     &trans              &trans  &trans  &trans            &hrl_r 10 DLLR     &trans            &trans             &trans                 &trans
                                                                         &trans             &trans              &trans  &trans  &trans            &trans
             >;
         };
@@ -429,16 +439,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 &trans  &kp QMARK  &kp RPAR  &kp LPAR  &kp COLON  &kp PIPE                   &kp LA(N3)  &kp EQUAL  &kp PLUS  &kp MINUS  &kp EXCL   &trans
 &trans  &kp AT     &kp RBRC  &kp LBRC  &kp DLLR   &kp TILDE  &trans  &trans  &kp DOT     &kp BSLH   &kp STAR  &kp FSLH   &kp CARET  &trans
                                        &trans     &trans     &trans  &trans  &trans      &trans
-            >;
-        };
-
-        space_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F10  &kp F11  &kp F12  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F7   &kp F8   &kp F9   &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp F4   &kp F5   &kp F6   &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans  &kp F1   &kp F2   &kp F3   &kp F12  &trans
-                                &mo 14  &trans  &kp DEL  &kp DEL  &trans  &trans
             >;
         };
 
@@ -507,8 +507,8 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         compatible = "zmk,conditional-layers";
 
         sym_mir {
-            if-layers = <1 9>;
-            then-layer = <11>;
+            if-layers = <1 10>;
+            then-layer = <12>;
         };
 
         hrm_mir {
@@ -517,8 +517,13 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         };
 
         space_rh_mods {
-            if-layers = <12>;
+            if-layers = <9>;
             then-layer = <5>;
+        };
+
+        space+nums {
+            if-layers = <9>;
+            then-layer = <8>;
         };
     };
 };
