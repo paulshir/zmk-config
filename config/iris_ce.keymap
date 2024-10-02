@@ -89,7 +89,7 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         startup_layers: startup_layers {
             compatible = "zmk,behavior-startup-layers";
             #binding-cells = <0>;
-            startup-layers-list = <2 4>;
+            startup-layers-list = <2>;
         };
 
         /* thumb hold tap - rolling hold */
