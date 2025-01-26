@@ -10,6 +10,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &sk { release-after-ms = <1500>; };
@@ -82,6 +84,11 @@ ZMK_BLOCK_SHIFT(dot, DOT)
         paste {
             bindings = <&kp LG(V)>;
             key-positions = <40 39>;
+        };
+
+        block {
+            bindings = <&tog 18>;
+            key-positions = <0 11>;
         };
     };
 
@@ -314,191 +321,191 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
-&kp TAB                     &kp Q   &kp W   &kp E   &kp R   &kp T                                                   &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
-&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F   &kp G                                                   &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
-&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC           &kp ENTER          &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                                    &mo 1   &volley_l LSHFT 8  &thtl_rt 9 SPACE  &tht_bspc 10 BSPC  &volley_r RSHFT 7  &tht_caps 15 0
+&mt LS(LC(LA(LGUI))) GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                    &kp N6             &kp N7          &kp N8     &kp N9   &kp N0    &num_word
+&kp TAB                     &kp Q   &kp W   &kp E   &kp R   &kp T                                                     &kp Y              &kp U           &kp I      &kp O    &kp P     &kp EQUAL
+&mt LCTRL ESCAPE            &kp A   &kp S   &kp D   &kp F   &kp G                                                     &kp H              &kp J           &kp K      &kp L    &kp SEMI  &kp SQT
+&thtl_rt 13 GRAVE           &kp Z   &kp X   &kp C   &kp V   &kp B              &kp ESC             &kp ENTER          &kp N              &kp N           &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                                                    &mo 1   &volley_l LSHFT 8  &thtl_rt 9 SPACE    &tht_bspc 10 BSPC  &volley_r RSHFT 7  &tht_caps 15 0
             >;
         };
 
         mirror_layer {
             bindings = <
-&none      &kp N0    &kp N9   &kp N8     &kp N7  &kp N6                                                  &kp N5     &kp N4  &kp N3  &kp N2  &kp N1  &kp GRAVE
-&kp EQUAL  &kp P     &kp O    &kp I      &kp U   &kp Y                                                   &kp T      &kp R   &kp E   &kp W   &kp Q   &kp TAB
-&kp SQT    &kp SEMI  &kp L    &kp K      &kp J   &kp H                                                   &kp G      &kp F   &kp D   &kp S   &kp A   &kp ESC
-&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET            &kp ESC           &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
-                                         &none   &volley_l RSHFT 7  &tht_bspc 10 BSPC  &thtl_rt 9 SPACE  &kp LSHFT  &none
+&none      &kp N0    &kp N9   &kp N8     &kp N7  &kp N6                                                    &kp N5     &kp N4  &kp N3  &kp N2  &kp N1  &kp GRAVE
+&kp EQUAL  &kp P     &kp O    &kp I      &kp U   &kp Y                                                     &kp T      &kp R   &kp E   &kp W   &kp Q   &kp TAB
+&kp SQT    &kp SEMI  &kp L    &kp K      &kp J   &kp H                                                     &kp G      &kp F   &kp D   &kp S   &kp A   &kp ESC
+&kp MINUS  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N              &kp RET              &kp ESC           &kp B      &kp V   &kp C   &kp X   &kp Z   &kp GRAVE
+                                         &none   &volley_l RSHFT 7  &tht_bspc 10 BSPC    &thtl_rt 9 SPACE  &kp LSHFT  &none
             >;
         };
 
         hrm_layer {
             bindings = <
-&trans  &trans          &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans             &trans
-&trans  &trans          &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans             &trans
-&trans  &hrm_l LSHFT A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &hrm_l RALT G                  &hrm_r RALT H  &hrm_r RGUI J  &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI  &trans
-&trans  &hrl_l 15 Z     &trans          &trans         &hrl_l 10 V    &trans         &trans  &trans  &trans         &hrl_r 10 M    &trans         &trans          &hrl_r 15 SLASH    &trans
-                                                       &trans         &trans         &trans  &trans  &trans         &trans
+&trans  &trans          &trans          &trans         &trans         &trans                           &trans         &trans         &trans         &trans          &trans             &trans
+&trans  &trans          &trans          &trans         &trans         &trans                           &trans         &trans         &trans         &trans          &trans             &trans
+&trans  &hrm_l LSHFT A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &hrm_l RALT G                    &hrm_r RALT H  &hrm_r RGUI J  &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI  &trans
+&trans  &hrl_l 15 Z     &trans          &trans         &hrl_l 10 V    &trans         &trans    &trans  &trans         &hrl_r 10 M    &trans         &trans          &hrl_r 15 SLASH    &trans
+                                                       &trans         &trans         &trans    &trans  &trans         &trans
             >;
         };
 
         hrm_mirror_layer {
             bindings = <
-&trans  &trans             &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans          &trans
-&trans  &trans             &trans          &trans         &trans         &trans                         &trans         &trans         &trans         &trans          &trans          &trans
-&trans  &hrm_l RSHFT SEMI  &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J  &hrm_l RALT H                  &hrm_r RALT G  &hrm_r LGUI F  &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A  &trans
-&trans  &hrl_l 15 SLASH    &trans          &trans         &hrl_l 10 M    &trans         &trans  &trans  &trans         &hrl_r 10 V    &trans         &trans          &hrl_r 15 Z     &trans
-                                                          &trans         &trans         &trans  &trans  &trans         &trans
+&trans  &trans             &trans          &trans         &trans         &trans                           &trans         &trans         &trans         &trans          &trans          &trans
+&trans  &trans             &trans          &trans         &trans         &trans                           &trans         &trans         &trans         &trans          &trans          &trans
+&trans  &hrm_l RSHFT SEMI  &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J  &hrm_l RALT H                    &hrm_r RALT G  &hrm_r LGUI F  &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A  &trans
+&trans  &hrl_l 15 SLASH    &trans          &trans         &hrl_l 10 M    &trans         &trans    &trans  &trans         &hrl_r 10 V    &trans         &trans          &hrl_r 15 Z     &trans
+                                                          &trans         &trans         &trans    &trans  &trans         &trans
             >;
         };
 
         relearn_layer {
             bindings = <
-&none   &no_s_n1  &no_s_n2  &no_s_n3  &no_s_n4  &no_s_n5                  &no_s_n6  &no_s_n7  &no_s_n8     &no_s_n9   &no_s_n0    &trans
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans    &trans    &trans       &trans     &trans      &none
-&trans  &trans    &trans    &trans    &trans    &trans                    &trans    &trans    &trans       &trans     &no_s_semi  &trans
-&mo 13  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans    &trans    &no_s_comma  &no_s_dot  &none       &none
-                                      &trans    &trans    &trans  &trans  &trans    &trans
+&none   &no_s_n1  &no_s_n2  &no_s_n3  &no_s_n4  &no_s_n5                    &no_s_n6  &no_s_n7  &no_s_n8     &no_s_n9   &no_s_n0    &trans
+&trans  &trans    &trans    &trans    &trans    &trans                      &trans    &trans    &trans       &trans     &trans      &none
+&trans  &trans    &trans    &trans    &trans    &trans                      &trans    &trans    &trans       &trans     &no_s_semi  &trans
+&mo 13  &trans    &trans    &trans    &trans    &trans    &trans    &trans  &trans    &trans    &no_s_comma  &no_s_dot  &none       &none
+                                      &trans    &trans    &trans    &trans  &trans    &trans
             >;
         };
 
         lh_mods_layer {
             bindings = <
-&trans  &trans     &trans     &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans    &sl 10    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans    &trans    &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &sl 10    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
 
         rh_mods_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans    &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans    &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &kp RSHFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &sl 10    &trans    &trans     &trans     &trans
-                                &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &kp RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &sl 10    &trans    &trans     &trans     &trans
+                                &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans    &trans     &trans     &trans                     &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &kp END   &kp PG_UP  &kp PG_DN  &kp HOME                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-&trans  &trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT                  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans  &trans    &trans     &trans     &trans     &trans  &trans  &none     &none      &none      &none      &none   &none
-                                     &trans     &trans     &trans  &trans  &trans    &trans
+&trans  &trans  &trans    &trans     &trans     &trans                       &trans    &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &kp END   &kp PG_UP  &kp PG_DN  &kp HOME                     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
+&trans  &trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans     &trans    &trans  &none     &none      &none      &none      &none   &none
+                                     &trans     &trans     &trans    &trans  &trans    &trans
             >;
         };
 
         num_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans   &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp COMMA  &kp N1   &kp N2  &kp N3  &kp RET    &trans
-                                &trans  &trans  &trans  &trans  &kp N0     &kp DOT
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans   &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA  &kp N1   &kp N2  &kp N3  &kp RET    &trans
+                                &trans  &trans  &trans    &trans  &kp N0     &kp DOT
             >;
         };
 
         space_layer {
             bindings = <
-&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                                   &mo 14   &trans  &kp DEL  &kp DEL  &trans  &trans
+&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans     &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                   &mo 14   &trans  &kp DEL    &kp DEL  &trans  &trans
             >;
         };
 
         sym_layer {
             bindings = <
-&trans  &trans     &trans     &trans    &trans     &trans                       &trans     &trans     &trans    &trans    &trans     &trans
-&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp UNDER                    &kp AMPS   &kp GRAVE  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
-&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                   &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &trans
-&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans  &trans  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp AT     &trans
-                                        &mo 14     &trans       &trans  &trans  &trans     &trans
+&trans  &trans     &trans     &trans    &trans     &trans                         &trans     &trans     &trans    &trans    &trans     &trans
+&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp UNDER                      &kp AMPS   &kp GRAVE  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
+&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                     &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &trans
+&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans    &trans  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp AT     &trans
+                                        &mo 14     &trans       &trans    &trans  &trans     &trans
             >;
         };
 
         sym_hrm_layer {
             bindings = <
-&trans  &trans                    &trans              &trans            &trans             &trans                              &trans            &trans             &trans            &trans             &trans                 &trans
-&trans  &trans                    &trans              &trans            &trans             &trans                              &trans            &trans             &trans            &trans             &trans                 &trans
-&trans  &hrm_l LSHFT EXCLAMATION  &hrm_l LCTRL MINUS  &hrm_l LALT PLUS  &hrm_l LGUI EQUAL  &hrm_l RALT LA(N3)                  &hrm_r RALT PIPE  &hrm_r RGUI COLON  &hrm_r LALT LPAR  &hrm_r RCTRL RPAR  &hrm_r RSHFT QUESTION  &trans
-&trans  &trans                    &trans              &trans            &hrl_l 10 BSLH     &trans              &trans  &trans  &trans            &hrl_r 10 DLLR     &trans            &trans             &trans                 &trans
-                                                                        &trans             &trans              &trans  &trans  &trans            &trans
+&trans  &trans                    &trans              &trans            &trans             &trans                                &trans            &trans             &trans            &trans             &trans                 &trans
+&trans  &trans                    &trans              &trans            &trans             &trans                                &trans            &trans             &trans            &trans             &trans                 &trans
+&trans  &hrm_l LSHFT EXCLAMATION  &hrm_l LCTRL MINUS  &hrm_l LALT PLUS  &hrm_l LGUI EQUAL  &hrm_l RALT LA(N3)                    &hrm_r RALT PIPE  &hrm_r RGUI COLON  &hrm_r LALT LPAR  &hrm_r RCTRL RPAR  &hrm_r RSHFT QUESTION  &trans
+&trans  &trans                    &trans              &trans            &hrl_l 10 BSLH     &trans              &trans    &trans  &trans            &hrl_r 10 DLLR     &trans            &trans             &trans                 &trans
+                                                                        &trans             &trans              &trans    &trans  &trans            &trans
             >;
         };
 
         sym_mir_layer {
             bindings = <
-&trans  &trans     &trans    &trans    &trans     &trans                     &trans      &trans     &trans    &trans     &trans     &trans
-&trans  &kp PRCNT  &kp RBKT  &kp LBKT  &kp GRAVE  &kp AMPS                   &kp UNDER   &kp DQT    &kp GT    &kp LT     &kp SQT    &trans
-&trans  &kp QMARK  &kp RPAR  &kp LPAR  &kp COLON  &kp PIPE                   &kp LA(N3)  &kp EQUAL  &kp PLUS  &kp MINUS  &kp EXCL   &trans
-&trans  &kp AT     &kp RBRC  &kp LBRC  &kp DLLR   &kp TILDE  &trans  &trans  &kp DOT     &kp BSLH   &kp STAR  &kp FSLH   &kp CARET  &trans
-                                       &trans     &trans     &trans  &trans  &trans      &trans
+&trans  &trans     &trans    &trans    &trans     &trans                       &trans      &trans     &trans    &trans     &trans     &trans
+&trans  &kp PRCNT  &kp RBKT  &kp LBKT  &kp GRAVE  &kp AMPS                     &kp UNDER   &kp DQT    &kp GT    &kp LT     &kp SQT    &trans
+&trans  &kp QMARK  &kp RPAR  &kp LPAR  &kp COLON  &kp PIPE                     &kp LA(N3)  &kp EQUAL  &kp PLUS  &kp MINUS  &kp EXCL   &trans
+&trans  &kp AT     &kp RBRC  &kp LBRC  &kp DLLR   &kp TILDE  &trans    &trans  &kp DOT     &kp BSLH   &kp STAR  &kp FSLH   &kp CARET  &trans
+                                       &trans     &trans     &trans    &trans  &trans      &trans
             >;
         };
 
         media_layer {
             bindings = <
-&bootloader  &tog 0      &tog 4        &tog 16       &tog 17  &sys_reset                     &sys_reset       &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans                             &trans                             &bootloader
-&trans       &trans      &trans        &trans        &trans   &studio_unlock                 &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans                             &trans                             &trans
-&trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                         &rgb_ug RGB_EFF  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_COLOR_HSB(298,100,41)  &rgb_ug RGB_COLOR_HSB(150,80,5)  &trans
-&trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans         &trans  &trans  &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_COLOR_HSB(242,0,0)     &trans
-                                                     &trans   &trans         &trans  &trans  &trans           &trans
+&bootloader  &tog 0      &tog 4        &tog 16       &tog 17  &sys_reset                        &sys_reset       &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans                             &trans                           &bootloader
+&trans       &trans      &trans        &trans        &trans   &studio_unlock                    &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &trans                             &trans                           &trans
+&trans       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans                            &rgb_ug RGB_EFF  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_COLOR_HSB(298,100,41)  &rgb_ug RGB_COLOR_HSB(150,80,5)  &trans
+&trans       &kp C_PREV  &kp C_PP      &kp C_NEXT    &trans   &trans          &trans    &trans  &trans           &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_COLOR_HSB(0,100,50)    &rgb_ug RGB_COLOR_HSB(242,0,0)   &trans
+                                                     &trans   &trans          &trans    &trans  &trans           &trans
             >;
         };
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-                                &trans  &trans  &trans  &mkp LCLK  &mkp RCLK       &mkp MCLK
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+                                &trans  &trans  &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
 
         hyper_layer {
             bindings = <
-&trans  &kp LG(LA(LC(LS(N1))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LA(LC(LS(N3))))  &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N5))))                  &kp LG(LA(LC(LS(N6))))    &kp LG(LA(LC(LS(N7))))    &kp LG(LA(LC(LS(N8))))  &kp LG(LA(LC(LS(N9))))     &kp LG(LA(LC(LS(N0))))  &trans
-&trans  &trans                  &trans                  &trans                  &trans                  &trans                                  &trans                    &kp LS(TAB)               &nwin                   &trans                     &trans                  &trans
-&trans  &trans                  &trans                  &trans                  &trans                  &trans                                  &kp LG(LA(LC(LS(LEFT))))  &kp LG(LA(LC(LS(DOWN))))  &kp LG(LA(LC(LS(UP))))  &kp LG(LA(LC(LS(RIGHT))))  &trans                  &trans
-&trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans  &trans  &trans                    &trans                    &trans                  &trans                     &trans                  &trans
-                                                                                &trans                  &trans                  &trans  &trans  &trans                    &trans
+&trans  &kp LG(LA(LC(LS(N1))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LA(LC(LS(N3))))  &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N5))))                    &kp LG(LA(LC(LS(N6))))    &kp LG(LA(LC(LS(N7))))    &kp LG(LA(LC(LS(N8))))  &kp LG(LA(LC(LS(N9))))     &kp LG(LA(LC(LS(N0))))  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                                    &trans                    &kp LS(TAB)               &nwin                   &trans                     &trans                  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                                    &kp LG(LA(LC(LS(LEFT))))  &kp LG(LA(LC(LS(DOWN))))  &kp LG(LA(LC(LS(UP))))  &kp LG(LA(LC(LS(RIGHT))))  &trans                  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans                    &trans                    &trans                  &trans                     &trans                  &trans
+                                                                                &trans                  &trans                  &trans    &trans  &trans                    &trans
             >;
         };
 
         reduce_layer {
             bindings = <
-&none   &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none   &none
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans
+&none   &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         reduce_ex_layer {
             bindings = <
-&none  &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none   &none
-&none  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &none
-&none  &trans  &trans  &trans  &trans  &trans  &none   &none   &trans  &trans  &trans  &trans  &trans  &none
-                               &trans  &trans  &trans  &trans  &trans  &trans
+&none  &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &none
+&none  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &none
+&none  &trans  &trans  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &trans  &trans  &none
+                               &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         block_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                            &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none  &none
+                            &none  &none  &none    &none  &none  &none
             >;
         };
     };
