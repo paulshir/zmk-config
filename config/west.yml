@@ -6,6 +6,8 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: paulshir
       url-base: https://github.com/paulshir
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     # - name: zmk
     #   remote: zmkfirmware
@@ -21,6 +23,9 @@ manifest:
       revision: main
     - name: zmk-behaviors-dev
       remote: paulshir
+      revision: main
+    - name: zmk-auto-layer
+      remote: urob
       revision: main
   self:
     path: config
