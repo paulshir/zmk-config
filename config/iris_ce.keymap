@@ -101,7 +101,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         tht_rh: tht_rh {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_RH";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <300>;
@@ -116,7 +115,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         tht_rt: tht_rt {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_RT";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <300>;
@@ -130,7 +128,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         thtl_rt: thtl_rt {
             compatible = "zmk,behavior-hold-tap";
-            label = "THTL_RT";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <300>;
@@ -143,7 +140,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         tht_caps: tht_caps {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_CAPS";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -156,7 +152,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         tht_num: tht_num {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_NUM";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
@@ -169,7 +164,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         volley_l: volley_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "VOLLEY_L";
             #binding-cells = <2>;
             bindings = <&kp>, <&mo>;
 
@@ -182,7 +176,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         volley_r: volley_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "VOLLEY_R";
             #binding-cells = <2>;
             bindings = <&kp>, <&mo>;
 
@@ -202,7 +195,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         hrm_l: hrm_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_L";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -216,7 +208,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         hrm_r: hrm_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRM_R";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -230,7 +221,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         hrl_l: hrl_l {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRL_L";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "balanced";
@@ -243,7 +233,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         hrl_r: hrl_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRL_R";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             flavor = "balanced";
@@ -264,7 +253,6 @@ ZMK_BLOCK_SHIFT(dot, DOT)
 
         tht_bspc: tht_bspc {
             compatible = "zmk,behavior-hold-tap";
-            label = "THT_BSPC";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <300>;
@@ -303,14 +291,12 @@ ZMK_BLOCK_SHIFT(dot, DOT)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp DOT &kp FSLH>;
-            label = "SYM_UP_DIR";
         };
 
         sym_double_colon: sym_double_colon {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp COLON &kp COLON>;
-            label = "SYM_DOUBLE_COLON";
         };
     };
 
