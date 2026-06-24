@@ -34,9 +34,8 @@
 #define REDUCE_EX  16
 #define BLOCK      17
 
-/* keycode / value shorthands */
+/* keycode / value shorthands / don't use fn macros shorthands as they are not compatible with keyboard layout editor */
 #define HYPER      LS(LC(LA(LGUI)))    /* hyper as a held modifier (mt) */
-// #define HY(k)      LG(LA(LC(LS(k))))   /* hyper + key, single press */
 #define RGB_PURPLE RGB_COLOR_HSB(298, 100, 41)
 #define RGB_GREEN  RGB_COLOR_HSB(150, 80, 5)
 #define RGB_RED    RGB_COLOR_HSB(0, 100, 50)
@@ -408,15 +407,16 @@
             >;
         };
 
-   //      hyper_layer {
-   //          bindings = <
-   // &trans        &kp HY(N1)    &kp HY(N2)    &kp HY(N3)    &kp HY(N4)    &kp HY(N5)                  &kp HY(N6)    &kp HY(N7)    &kp HY(N8)    &kp HY(N9)    &kp HY(N0)    &trans
-   // &trans        &trans        &trans        &trans        &trans        &trans                      &trans        &kp LS(TAB)   &nwin         &trans        &trans        &trans
-   // &trans        &trans        &trans        &trans        &trans        &trans                      &kp HY(LEFT)  &kp HY(DOWN)  &kp HY(UP)    &kp HY(RIGHT) &trans        &trans
-   // &trans        &trans        &trans        &trans        &trans        &trans        &trans &trans &trans        &trans        &trans        &trans        &trans        &trans
-   //                                           &trans &trans &trans &trans &trans &trans
-   //          >;
-   //      };
+        hyper_layer {
+            bindings = <
+&trans  &kp LG(LA(LC(LS(N1))))  &kp LG(LA(LC(LS(N2))))  &kp LG(LA(LC(LS(N3))))  &kp LG(LA(LC(LS(N4))))  &kp LG(LA(LC(LS(N5))))                    &kp LG(LA(LC(LS(N6))))    &kp LG(LA(LC(LS(N7))))    &kp LG(LA(LC(LS(N8))))  &kp LG(LA(LC(LS(N9))))     &kp LG(LA(LC(LS(N0))))  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                                    &trans                    &kp LS(TAB)               &nwin                   &trans                     &trans                  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                                    &kp LG(LA(LC(LS(LEFT))))  &kp LG(LA(LC(LS(DOWN))))  &kp LG(LA(LC(LS(UP))))  &kp LG(LA(LC(LS(RIGHT))))  &trans                  &trans
+&trans  &trans                  &trans                  &trans                  &trans                  &trans                  &trans    &trans  &trans                    &trans                    &trans                  &trans                     &trans                  &trans
+                                                                                &trans                  &trans                  &trans    &trans  &trans                    &trans
+            >;
+        };
+
 
         lh_mods_layer {
             bindings = <
