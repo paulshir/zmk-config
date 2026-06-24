@@ -312,7 +312,7 @@
             bindings = <
 &trans  &trans            &trans          &trans         &trans          &trans                           &trans         &trans          &trans         &trans          &trans                &trans
 &trans  &kp B             &kp L           &kp D          &kp W           &kp Z                            &kp SQT        &kp F           &kp O          &kp U           &kp J                 &kp SEMI
-&trans  &hrm_l LSHFT N    &hrm_l LCTRL R  &hrm_l LALT T  &hrm_l LGUI S   &hrm_l RALT G                    &hrm_r RALT Y  &hrm_r RGUI H   &hrm_r LALT A  &hrm_r RCTRL E  &hrm_r RSHFT I        &kp SQT
+&trans  &hrm_l LSHFT N    &hrm_l LCTRL R  &hrm_l LALT T  &hrm_l LGUI S   &hrm_l RALT G                    &hrm_r RALT Y  &hrm_r RGUI H   &hrm_r LALT A  &hrm_r RCTRL E  &hrm_r RSHFT I        &kp COMMA
 &trans  &hrl_l HYPER_L Q  &kp X           &kp M          &hrl_l SYM_L C  &kp V          &trans    &trans  &kp K          &hrl_r SYM_L P  &kp DOT        &kp MINUS       &hrl_r HYPER_L SLASH  &none
                                                          &trans          &trans         &trans    &trans  &trans         &trans
             >;
@@ -320,10 +320,10 @@
 
         graphite_mir_layer {
             bindings = <
-&trans  &trans                &trans          &trans         &trans          &trans                           &trans         &trans          &trans         &trans          &trans            &trans
-&trans  &kp J                 &kp U           &kp O          &kp F           &kp SQT                          &kp Z          &kp W           &kp D          &kp L           &kp B             &trans
-&trans  &hrm_l RSHFT I        &hrm_l RCTRL E  &hrm_l LALT A  &hrm_l RGUI H   &hrm_l RALT Y                    &hrm_r RALT G  &hrm_r LGUI S   &hrm_r LALT T  &hrm_r LCTRL R  &hrm_r LSHFT N    &trans
-&none   &hrl_l HYPER_L SLASH  &kp MINUS       &kp DOT        &hrl_l SYM_L P  &kp K          &trans    &trans  &kp V          &hrl_r SYM_L C  &kp M          &kp X           &hrl_r HYPER_L Q  &trans
+&trans     &trans                &trans          &trans         &trans          &trans                           &trans         &trans          &trans         &trans          &trans            &trans
+&kp SEMI   &kp J                 &kp U           &kp O          &kp F           &kp SQT                          &kp Z          &kp W           &kp D          &kp L           &kp B             &trans
+&kp COMMA  &hrm_l RSHFT I        &hrm_l RCTRL E  &hrm_l LALT A  &hrm_l RGUI H   &hrm_l RALT Y                    &hrm_r RALT G  &hrm_r LGUI S   &hrm_r LALT T  &hrm_r LCTRL R  &hrm_r LSHFT N    &trans
+&none      &hrl_l HYPER_L SLASH  &kp MINUS       &kp DOT        &hrl_l SYM_L P  &kp K          &trans    &trans  &kp V          &hrl_r SYM_L C  &kp M          &kp X           &hrl_r HYPER_L Q  &trans
                                                              &trans          &trans         &trans    &trans  &trans         &trans
             >;
         };
