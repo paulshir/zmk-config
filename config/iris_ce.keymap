@@ -293,8 +293,8 @@
 &mt HYPER GRAVE     &kp N1            &kp N2          &kp N3         &kp N4          &kp N5                                                             &kp N6              &kp N7               &kp N8         &kp N9          &kp N0                &num_word NUM_L
 &kp TAB             &kp Q             &kp W           &kp E          &kp R           &kp T                                                              &kp Y               &kp U                &kp I          &kp O           &kp P                 &kp EQUAL
 &mt LCTRL ESCAPE    &hrm_l LSHFT A    &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F   &hrm_l RALT G                                                      &hrm_r RALT H       &hrm_r RGUI J        &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI     &kp SQT
-&tht MEDIA_L GRAVE  &hrl_l HYPER_L Z  &kp X           &kp C          &hrl_l SYM_L V  &kp B                    &kp ESC             &kp ENTER             &kp N               &hrl_r SYM_L M       &kp COMMA      &kp DOT         &hrl_r HYPER_L SLASH  &kp MINUS
-                                                                     &mo BASE_MIR_L  &vol_l LSHFT BASE_MIR_L  &tht NUM_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
+&tht MEDIA_L GRAVE  &hrl_l HYPER_L Z  &kp X           &kp C          &hrl_l SYM_L V  &kp B                    &kp ESC             &kp ENTER             &kp N               &hrl_r SYM_L M       &kp COMMA      &kp DOT         &hrl_r HYPER_L SLASH  &tht 9 MINUS
+                                                                     &mo 11          &vol_l LSHFT BASE_MIR_L  &tht NUM_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
             >;
         };
 
@@ -303,28 +303,28 @@
 &num_word NUM_L  &kp N0                &kp N9          &kp N8         &kp N7               &kp N6                                                        &kp N5         &kp N4          &kp N3         &kp N2          &kp N1            &kp GRAVE
 &kp EQUAL        &kp P                 &kp O           &kp I          &kp U                &kp Y                                                         &kp T          &kp R           &kp E          &kp W           &kp Q             &kp TAB
 &kp SQT          &hrm_l RSHFT SEMI     &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J        &hrm_l RALT H                                                 &hrm_r RALT G  &hrm_r LGUI F   &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A    &kp ESC
-&kp MINUS        &hrl_l HYPER_L SLASH  &kp DOT         &kp COMMA      &hrl_l SYM_L M       &kp N               &kp RET                 &kp ESC           &kp B          &hrl_r SYM_L V  &kp C          &kp X           &hrl_r HYPER_L Z  &kp GRAVE
-                                                                      &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht NUM_L SPACE  &kp LSHFT      &none
+&tht 9 MINUS     &hrl_l HYPER_L SLASH  &kp DOT         &kp COMMA      &hrl_l SYM_L M       &kp N               &kp RET                 &kp ESC           &kp B          &hrl_r SYM_L V  &kp C          &kp X           &hrl_r HYPER_L Z  &kp GRAVE
+                                                                      &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht NUM_L SPACE  &kp LSHFT      &mo 11
             >;
         };
 
         graphite_layer {
             bindings = <
-&mt HYPER GRAVE     &kp N1            &kp N2          &kp N3         &kp N4           &kp N5                                                       &kp N6              &kp N7               &kp N8         &kp N9          &kp N0                &num_word NUM_L
-&kp TAB             &kp B             &kp L           &kp D          &kp W            &kp Z                                                        &kp SQT             &kp F                &kp O          &kp U           &kp J                 &kp SEMI
-&mt LCTRL ESCAPE    &hrm_l LSHFT N    &hrm_l LCTRL R  &hrm_l LALT T  &hrm_l LGUI S    &hrm_l RALT G                                                &hrm_r RALT Y       &hrm_r RGUI H        &hrm_r LALT A  &hrm_r RCTRL E  &hrm_r RSHFT I        &kp SQT
-&tht MEDIA_L GRAVE  &hrl_l HYPER_L Q  &kp X           &kp M          &hrl_l SYM_L C   &kp V               &kp ESC            &kp ENTER             &kp K               &hrl_r SYM_L P       &kp DOT        &kp MINUS       &hrl_r HYPER_L SLASH  &kp MINUS
-                                                                     &mo GRAPH_MIR_L  &vol_l LSHFT NUM_L  &tht FN_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
+&trans  &trans            &trans          &trans         &trans          &trans                           &trans         &trans          &trans         &trans          &trans                &trans
+&trans  &kp B             &kp L           &kp D          &kp W           &kp Z                            &kp SQT        &kp F           &kp O          &kp U           &kp J                 &kp SEMI
+&trans  &hrm_l LSHFT N    &hrm_l LCTRL R  &hrm_l LALT T  &hrm_l LGUI S   &hrm_l RALT G                    &hrm_r RALT Y  &hrm_r RGUI H   &hrm_r LALT A  &hrm_r RCTRL E  &hrm_r RSHFT I        &kp SQT
+&trans  &hrl_l HYPER_L Q  &kp X           &kp M          &hrl_l SYM_L C  &kp V          &trans    &trans  &kp K          &hrl_r SYM_L P  &kp DOT        &kp MINUS       &hrl_r HYPER_L SLASH  &none
+                                                         &trans          &trans         &trans    &trans  &trans         &trans
             >;
         };
 
         graphite_mir_layer {
             bindings = <
-&none      &kp N0                &kp N9          &kp N8         &kp N7               &kp N6                                                       &kp N5         &kp N4          &kp N3         &kp N2          &kp N1            &kp GRAVE
-&kp SEMI   &kp J                 &kp U           &kp O          &kp F                &kp SQT                                                      &kp Z          &kp W           &kp D          &kp L           &kp B             &kp TAB
-&kp SQT    &hrm_l RSHFT I        &hrm_l RCTRL E  &hrm_l LALT A  &hrm_l RGUI H        &hrm_l RALT Y                                                &hrm_r RALT G  &hrm_r LGUI S   &hrm_r LALT T  &hrm_r LCTRL R  &hrm_r LSHFT N    &kp ESC
-&kp MINUS  &hrl_l HYPER_L SLASH  &kp MINUS       &kp DOT        &hrl_l SYM_L P       &kp K               &kp RET                 &kp ESC          &kp V          &hrl_r SYM_L C  &kp M          &kp X           &hrl_r HYPER_L Q  &kp GRAVE
-                                                                &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht FN_L SPACE  &kp LSHFT      &none
+&trans  &trans                &trans          &trans         &trans          &trans                           &trans         &trans          &trans         &trans          &trans            &trans
+&trans  &kp J                 &kp U           &kp O          &kp F           &kp SQT                          &kp Z          &kp W           &kp D          &kp L           &kp B             &trans
+&trans  &hrm_l RSHFT I        &hrm_l RCTRL E  &hrm_l LALT A  &hrm_l RGUI H   &hrm_l RALT Y                    &hrm_r RALT G  &hrm_r LGUI S   &hrm_r LALT T  &hrm_r LCTRL R  &hrm_r LSHFT N    &trans
+&none   &hrl_l HYPER_L SLASH  &kp MINUS       &kp DOT        &hrl_l SYM_L P  &kp K          &trans    &trans  &kp V          &hrl_r SYM_L C  &kp M          &kp X           &hrl_r HYPER_L Q  &trans
+                                                             &trans          &trans         &trans    &trans  &trans         &trans
             >;
         };
 
@@ -350,21 +350,21 @@
 
         num_layer {
             bindings = <
-&trans  &trans     &trans  &trans  &trans  &trans                        &trans     &trans   &trans  &trans  &trans     &trans
-&trans  &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS                     &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &trans
-&trans  &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS                      &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &trans
-&trans  &kp COMMA  &kp N1  &kp N2  &kp N3  &kp RET    &trans     &trans  &kp COMMA  &kp N1   &kp N2  &kp N3  &kp RET    &trans
-                                   &trans  &kp N0     &kp DOT    &trans  &kp N0     &kp DOT
+&trans  &trans     &trans  &trans  &trans   &trans                       &trans     &trans   &trans  &trans  &trans     &trans
+&trans  &kp FSLH   &kp N7  &kp N8  &kp N9   &kp MINUS                    &kp FSLH   &kp N7   &kp N8  &kp N9  &kp MINUS  &trans
+&trans  &kp STAR   &kp N4  &kp N5  &kp N6   &kp PLUS                     &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS   &trans
+&trans  &kp COMMA  &kp N1  &kp N2  &kp N3   &kp RET    &trans    &trans  &kp COMMA  &kp N1   &kp N2  &kp N3  &kp RET    &trans
+                                   &kp DOT  &kp N0     &trans    &trans  &kp N0     &kp DOT
             >;
         };
 
         sym_layer {
             bindings = <
-&trans  &trans     &trans     &trans    &trans       &trans                         &trans     &trans     &trans    &trans    &trans     &trans
-&trans  &kp SQT    &kp LT     &kp GT    &kp DQT      &kp UNDER                      &kp AMPS   &kp GRAVE  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
-&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL    &kp LA(N3)                     &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &trans
-&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH     &sym_up_dir  &trans    &trans  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp AT     &trans
-                                        &mo MOUSE_L  &trans       &trans    &trans  &trans     &trans
+&trans  &trans     &trans     &trans    &trans     &trans                         &trans     &trans     &trans    &trans    &trans     &trans
+&trans  &kp SQT    &kp LT     &kp GT    &kp DQT    &kp UNDER                      &kp AMPS   &kp GRAVE  &kp LBKT  &kp RBKT  &kp PRCNT  &trans
+&trans  &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp LA(N3)                     &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR  &kp QMARK  &trans
+&trans  &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &sym_up_dir  &trans    &trans  &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC  &kp AT     &trans
+                                        &trans     &trans       &trans    &trans  &trans     &trans
             >;
         };
 
@@ -380,11 +380,11 @@
 
         fn_layer {
             bindings = <
-&trans  &trans   &kp F10  &kp F11  &kp F12      &trans                      &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
-&trans  &kp F10  &kp F7   &kp F8   &kp F9       &trans                      &trans  &kp F10  &kp F7   &kp F8   &kp F9  &trans
-&trans  &kp F11  &kp F4   &kp F5   &kp F6       &trans                      &trans  &kp F11  &kp F4   &kp F5   &kp F6  &trans
-&trans  &kp F12  &kp F1   &kp F2   &kp F3       &trans  &trans     &trans   &trans  &kp F12  &kp F1   &kp F2   &kp F3  &trans
-                                   &mo MOUSE_L  &trans  &kp DEL    &kp DEL  &trans  &trans
+&trans  &trans   &kp F10  &kp F11  &kp F12  &trans                      &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
+&trans  &kp F10  &kp F7   &kp F8   &kp F9   &trans                      &trans  &kp F10  &kp F7   &kp F8   &kp F9  &trans
+&trans  &kp F11  &kp F4   &kp F5   &kp F6   &trans                      &trans  &kp F11  &kp F4   &kp F5   &kp F6  &trans
+&trans  &kp F12  &kp F1   &kp F2   &kp F3   &trans  &trans     &trans   &trans  &kp F12  &kp F1   &kp F2   &kp F3  &trans
+                                   &trans   &trans  &kp DEL    &kp DEL  &trans  &trans
             >;
         };
 
