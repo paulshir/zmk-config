@@ -60,7 +60,7 @@
     delay-ms = <0>;
 };
 
-num_word {};
+&num_word {};
 
 /* Emits a single mod-morph node; invoked inside the behaviors node below so all
    no_s_* behaviors share one node rather than each defining their own. */
