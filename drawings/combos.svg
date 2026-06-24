@@ -345,20 +345,21 @@ path.combo {
 <g transform="translate(812, 210)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">-</text>
+<text x="0" y="24" class="key hold">fn</text>
 </g>
 <g transform="translate(224, 266)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">base_mir</tspan></text>
+<text x="0" y="0" class="key tap">mouse</text>
 </g>
 <g transform="translate(280, 273)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">num</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">base_mir</tspan></text>
 <text x="0" y="24" class="key hold">LSHFT</text>
 </g>
 <g transform="translate(348, 294) rotate(25.0)" class="key keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="24" class="key hold">fn</text>
+<text x="0" y="24" class="key hold">num</text>
 </g>
 <g transform="translate(492, 294) rotate(-25.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

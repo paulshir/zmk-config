@@ -293,8 +293,8 @@
 &mt HYPER GRAVE     &kp N1            &kp N2          &kp N3         &kp N4          &kp N5                                                             &kp N6              &kp N7               &kp N8         &kp N9          &kp N0                &num_word NUM_L
 &kp TAB             &kp Q             &kp W           &kp E          &kp R           &kp T                                                              &kp Y               &kp U                &kp I          &kp O           &kp P                 &kp EQUAL
 &mt LCTRL ESCAPE    &hrm_l LSHFT A    &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F   &hrm_l RALT G                                                      &hrm_r RALT H       &hrm_r RGUI J        &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI     &kp SQT
-&tht MEDIA_L GRAVE  &hrl_l HYPER_L Z  &kp X           &kp C          &hrl_l SYM_L V  &kp B                    &kp ESC             &kp ENTER             &kp N               &hrl_r SYM_L M       &kp COMMA      &kp DOT         &hrl_r HYPER_L SLASH  &tht 9 MINUS
-                                                                     &mo 11          &vol_l LSHFT BASE_MIR_L  &tht NUM_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
+&tht MEDIA_L GRAVE  &hrl_l HYPER_L Z  &kp X           &kp C          &hrl_l SYM_L V  &kp B                    &kp ESC             &kp ENTER             &kp N               &hrl_r SYM_L M       &kp COMMA      &kp DOT         &hrl_r HYPER_L SLASH  &tht FN_L MINUS
+                                                                     &mo MOUSE_L     &vol_l LSHFT BASE_MIR_L  &tht NUM_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
             >;
         };
 
@@ -303,7 +303,7 @@
 &num_word NUM_L  &kp N0                &kp N9          &kp N8         &kp N7               &kp N6                                                        &kp N5         &kp N4          &kp N3         &kp N2          &kp N1            &kp GRAVE
 &kp EQUAL        &kp P                 &kp O           &kp I          &kp U                &kp Y                                                         &kp T          &kp R           &kp E          &kp W           &kp Q             &kp TAB
 &kp SQT          &hrm_l RSHFT SEMI     &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J        &hrm_l RALT H                                                 &hrm_r RALT G  &hrm_r LGUI F   &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A    &kp ESC
-&tht 9 MINUS     &hrl_l HYPER_L SLASH  &kp DOT         &kp COMMA      &hrl_l SYM_L M       &kp N               &kp RET                 &kp ESC           &kp B          &hrl_r SYM_L V  &kp C          &kp X           &hrl_r HYPER_L Z  &kp GRAVE
+&tht FN_L MINUS  &hrl_l HYPER_L SLASH  &kp DOT         &kp COMMA      &hrl_l SYM_L M       &kp N               &kp RET                 &kp ESC           &kp B          &hrl_r SYM_L V  &kp C          &kp X           &hrl_r HYPER_L Z  &kp GRAVE
                                                                       &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht NUM_L SPACE  &kp LSHFT      &mo 11
             >;
         };
