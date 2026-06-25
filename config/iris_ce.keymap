@@ -466,20 +466,20 @@
 
         lh_mods_layer {
             bindings = <
-&none  &none      &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
-&none  &none      &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
-&none  &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                   &trans  &trans  &trans  &trans  &trans  &trans
-&none  &sl 1      &td_nav    &td_sym   &td_num   &none     &none    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                       &none     &none     &none    &trans  &trans  &trans
+&none  &none           &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
+&none  &none           &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
+&none  &sk LSHFT       &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                   &trans  &trans  &trans  &trans  &trans  &trans
+&none  &sl BASE_MIR_L  &td_nav    &td_sym   &td_num   &none    &none    &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                  &none     &none     &none    &trans   &trans   &trans
             >;
         };
 
         rh_mods_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none      &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none      &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &sk RSHFT  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &none  &none     &td_num   &td_sym   &td_nav    &sl 1      &none
+&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans                   &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &sk RSHFT      &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &none  &none     &td_num   &td_sym   &td_nav    &sl BASE_MIR_L &none
                                 &trans  &trans  &trans    &none  &none     &none
             >;
         };
