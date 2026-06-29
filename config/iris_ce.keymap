@@ -24,16 +24,15 @@
 #define NUM_L        6
 #define SYM_L        7
 #define SYM_MIR_L    8
-#define SPACE_L      9
-#define FN_L         10
-#define MEDIA_L      11
-#define MOUSE_L      12
-#define HYPER_L      13
-#define LH_MODS_L    14
-#define RH_MODS_L    15
-#define REDUCE_L     16
-#define REDUCE_EX_L  17
-#define BLOCK_L      18
+#define FN_L         9
+#define MEDIA_L      10
+#define MOUSE_L      11
+#define HYPER_L      12
+#define LH_MODS_L    13
+#define RH_MODS_L    14
+#define REDUCE_L     15
+#define REDUCE_EX_L  16
+#define BLOCK_L      17
 
 /* keycode / value shorthands / don't use fn macros shorthands as they are not compatible with keyboard layout editor */
 
@@ -190,7 +189,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <1500>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <RHK RHT LHT>;
+            hold-trigger-key-positions = <RHK RHT>;
             hold-while-undecided;
         };
 
@@ -200,7 +199,7 @@
             bindings = <&kp>, <&mo>;
 
             flavor = "hold-preferred";
-            hold-trigger-key-positions = <LHK LHT RHT>;
+            hold-trigger-key-positions = <LHK LHT>;
             tapping-term-ms = <1500>;
         };
 
@@ -281,29 +280,36 @@
         sym_word: sym_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <SQT LT GT DQT UNDER EXCL MINUS PLUS EQUAL N3 CARET FSLH STAR BSLH AMPS PIPE GRAVE LBKT RBKT PRCNT PIPE COLON LPAR RPAR QMARK TILDE DLLR LBRC RBRC AT BSPC DEL SPC>;
+            continue-list = <SQT LT GT DQT UNDER EXCL MINUS PLUS EQUAL N3 CARET FSLH STAR BSLH AMPS PIPE GRAVE LBKT RBKT PRCNT PIPE COLON LPAR RPAR QMARK TILDE DLLR LBRC RBRC AT BSPC DEL SPC PERIOD SLASH>;
             ignore-modifiers;
         };
 
         td_num: td_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&sl NUM_L>, <&num_word NUM_L>;
         };
 
         td_sym: td_sym {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&sl SYM_L>, <&sym_word SYM_L>;
         };
 
         td_nav: td_nav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&sl NAV_L>, <&nav_word NAV_L>;
+        };
+
+        td_mir: td_mir {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&sl BASE_MIR_L>, <&to BASE_MIR_L>;
         };
     };
 
@@ -328,9 +334,9 @@
             bindings = <
 &mt HYPER GRAVE     &kp N1          &kp N2          &kp N3         &kp N4         &kp N5                                                               &kp N6              &kp N7               &kp N8         &kp N9          &kp N0             &num_word NUM_L
 &kp TAB             &kp Q           &kp W           &kp E          &kp R          &kp T                                                                &kp Y               &kp U                &kp I          &kp O           &kp P              &kp EQUAL
-&mt LCTRL ESCAPE    &hrm_l LSHFT A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &hrm_l RALT G                                                        &hrm_r RALT H       &hrm_r RGUI J        &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI  &kp SQT
-&tht MEDIA_L GRAVE  &kp Z           &kp X           &kp C          &kp V          &kp B                    &kp ESC               &kp ENTER             &kp N               &kp M                &kp COMMA      &kp DOT         &kp SLASH          &tht FN_L MINUS
-                                                                   &mo MOUSE_L    &vol_l LSHFT BASE_MIR_L  &tht SPACE_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
+&lt LH_MODS_L ESC   &hrm_l LSHFT A  &hrm_l LCTRL S  &hrm_l LALT D  &hrm_l LGUI F  &hrm_l RALT G                                                        &hrm_r RALT H       &hrm_r RGUI J        &hrm_r LALT K  &hrm_r RCTRL L  &hrm_r RSHFT SEMI  &kp SQT
+&tht MEDIA_L GRAVE  &kp Z           &kp X           &kp C          &kp V          &kp B                    &kp ESC             &kp ENTER             &kp N               &kp M                &kp COMMA      &kp DOT         &kp SLASH          &tht FN_L MINUS
+                                                                   &mo MOUSE_L    &vol_l LSHFT BASE_MIR_L  &tht NUM_L SPACE    &tht_bspc SYM_L BSPC  &vol_r RSHFT NAV_L  &tht_caps HYPER_L 0
             >;
         };
 
@@ -338,9 +344,9 @@
             bindings = <
 &num_word NUM_L  &kp N0             &kp N9          &kp N8         &kp N7               &kp N6                                                          &kp N5         &kp N4         &kp N3         &kp N2          &kp N1          &kp GRAVE
 &kp EQUAL        &kp P              &kp O           &kp I          &kp U                &kp Y                                                           &kp T          &kp R          &kp E          &kp W           &kp Q           &kp TAB
-&kp SQT          &hrm_l RSHFT SEMI  &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J        &hrm_l RALT H                                                   &hrm_r RALT G  &hrm_r LGUI F  &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A  &kp ESC
+&kp SQT          &hrm_l RSHFT SEMI  &hrm_l RCTRL L  &hrm_l LALT K  &hrm_l RGUI J        &hrm_l RALT H                                                   &hrm_r RALT G  &hrm_r LGUI F  &hrm_r LALT D  &hrm_r LCTRL S  &hrm_r LSHFT A  &lt LH_MODS_L ESC
 &tht FN_L MINUS  &kp SLASH          &kp DOT         &kp COMMA      &kp M                &kp N               &kp RET                 &kp ESC             &kp B          &kp V          &kp C          &kp X           &kp Z           &kp GRAVE
-                                                                   &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht SPACE_L SPACE  &kp LSHFT      &mo 11
+                                                                   &tht_caps HYPER_L 0  &vol_l RSHFT NAV_L  &tht_bspc SYM_L BSPC    &tht NUM_L SPACE    &kp LSHFT      &mo 11
             >;
         };
 
@@ -414,16 +420,6 @@
             >;
         };
 
-        space_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         fn_layer {
             bindings = <
 &trans  &trans   &kp F10  &kp F11  &kp F12  &trans                      &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
@@ -446,10 +442,10 @@
 
         mouse_layer {
             bindings = <
-&trans          &trans          &trans           &trans  &trans     &trans                             &trans          &trans          &trans        &trans           &trans  &trans
-&trans          &mmv MOVE_UP    &trans           &trans  &trans     &trans                             &trans          &trans          &trans        &trans           &trans  &trans
-&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans     &trans                             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans          &trans          &trans           &trans  &trans     &trans     &trans       &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans          &trans          &trans           &trans     &trans                             &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &trans          &mmv MOVE_UP    &trans           &trans     &trans                             &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &trans                             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans          &trans          &trans           &trans     &trans     &trans       &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
                                                          &mkp MCLK  &mkp RCLK  &mkp LCLK    &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
@@ -469,23 +465,23 @@
 &none  &none           &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
 &none  &none           &none      &none     &none     &none                      &trans  &trans  &trans  &trans  &trans  &trans
 &none  &sk LSHFT       &sk LCTRL  &sk LALT  &sk LGUI  &sk RALT                   &trans  &trans  &trans  &trans  &trans  &trans
-&none  &sl BASE_MIR_L  &td_nav    &td_sym   &td_num   &none    &none    &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                                  &none     &none     &none    &trans   &trans   &trans
+&none  &none           &td_nav    &td_sym   &td_num   &none    &none    &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                                            &none     &td_mir  &trans   &trans   &td_mir &none
             >;
         };
 
         rh_mods_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none          &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &none     &none     &none     &none      &none          &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &sk RSHFT      &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &none  &none     &td_num   &td_sym   &td_nav    &sl BASE_MIR_L &none
-                                &trans  &trans  &trans    &none  &none     &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &none     &none     &none     &none      &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &none     &none     &none     &none      &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &sk RALT  &sk RGUI  &sk LALT  &sk RCTRL  &sk RSHFT      &none
+&trans  &trans  &trans  &trans  &trans  &trans   &trans    &none  &none     &td_num   &td_sym   &td_nav    &none          &none
+                                &trans  &td_mir  &trans    &none  &td_mir   &none
             >;
         };
 
         reduce_layer {
-            bindings = <
+           bindings = <
 &none   &none   &none   &none   &none   &none                     &none   &none   &none   &none   &none   &none
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -528,18 +524,8 @@
             then-layer = <SYM_MIR_L>;
         };
 
-        space_num {
-            if-layers = <SPACE_L>;
-            then-layer = <NUM_L>;
-        };
-
-        space_mods {
-            if-layers = <SPACE_L>;
-            then-layer = <LH_MODS_L>;
-        };
-
-        space_mods_mir {
-            if-layers = <BASE_MIR_L SPACE_L>;
+        mods {
+            if-layers = <LH_MODS_L>;
             then-layer = <RH_MODS_L>;
         };
     };

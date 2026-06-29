@@ -282,6 +282,7 @@ path.combo {
 <g transform="translate(812, 154)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">ESC</text>
+<text x="0" y="24" class="key hold">lh_mods</text>
 </g>
 <g transform="translate(28, 210)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -358,7 +359,7 @@ path.combo {
 <g transform="translate(492, 294) rotate(-25.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="24" class="key hold">space</text>
+<text x="0" y="24" class="key hold">num</text>
 </g>
 <g transform="translate(560, 273)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -366,7 +367,7 @@ path.combo {
 </g>
 <g transform="translate(616, 266)" class="key keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">media</text>
+<text x="0" y="0" class="key tap">mouse</text>
 </g>
 </g>
 </g>
