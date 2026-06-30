@@ -12,6 +12,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+      revision: main
     - name: zmk-board-iris-ce
       remote: paulshir
     - name: zmk-behaviors-dev
