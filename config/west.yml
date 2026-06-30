@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: v0.4
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -12,16 +12,13 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-      revision: main
     - name: zmk-board-iris-ce
       remote: paulshir
     - name: zmk-behaviors-dev
       remote: paulshir
     - name: zmk-auto-layer
       remote: urob
-      revision: main
     - name: zmk-tri-state
       remote: urob
-      revision: main
   self:
     path: config
